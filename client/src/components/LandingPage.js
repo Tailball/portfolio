@@ -1,15 +1,10 @@
 import React from 'react';
 
+import Navigation from './Navigation';
+
 const LandingPage = () => (
   <div id="LandingPage">
-    <div className="navigation">
-      <a href="#">SERVICES</a>
-      <a href="#">KNOWLEDGE</a>
-      <a href="https://www.facebook.com/pg/jnpfreelance/photos" target="_blank">
-        PORTFOLIO
-      </a>
-      <a href="#">CONTACT</a>
-    </div>
+    <Navigation />
 
     <div className="landingPageMainContainer">
       <div className="quote">

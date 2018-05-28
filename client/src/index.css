@@ -43,15 +43,18 @@ h1, h2, h3, h4 {
   .navigation {
     width: 100vw;
     text-align: right;
+    
     margin-top: 65px;
     margin-right: 100px;
   }
 
     .navigation a {
       color: white;
+      
       font-size: 12pt;
       font-weight: 300;
       text-decoration: none;
+      
       margin-left: 25px;
     }
       .navigation a:hover {
@@ -65,6 +68,7 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
     width: 60vw;
   }
 

@@ -10,13 +10,11 @@ const app = express();
 //Middleware
 app.use(logger);
 
-//Routing
-app.use("/", express.static("./client/build"));
+//Routing - Static
+app.use('/', express.static('./client/build'));
 
-//Static
-app.get('/', (req, res) => {
-  res.send('helloooo');
-});
+//Routing - Api
+app.use('/api/contact', contact);
 
 //Config and boot
 const port = 3000;
