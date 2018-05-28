@@ -1,0 +1,168 @@
+/******************************************************************************************/
+/* MAIN ATTRIBUTES */
+/******************************************************************************************/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif; /*300-400-500-600*/
+  font-size: 14pt;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.mainContainer {
+  width: 100vw;
+}
+
+
+/******************************************************************************************/
+/* LANDING PAGE */
+/******************************************************************************************/
+
+#LandingPage {
+  height: 100vh;
+  background-image: url("./images/backgroundLanding.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  
+  align-items: center;
+  flex-direction: column;
+  
+  color: white;
+}
+
+  /******************************************************************************************/
+
+  .navigation {
+    width: 100vw;
+    text-align: right;
+    margin-top: 65px;
+    margin-right: 100px;
+  }
+
+    .navigation a {
+      color: white;
+      font-size: 12pt;
+      font-weight: 300;
+      text-decoration: none;
+      margin-left: 25px;
+    }
+      .navigation a:hover {
+        color: #dfad00;
+      }
+
+  /******************************************************************************************/
+
+  .landingPageMainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60vw;
+  }
+
+    .quote {
+      margin-bottom: 90px;
+    }
+      .quote h1 {
+        text-align: center;
+
+        font-weight: 300;
+        font-size: 38pt;
+        line-height: 45pt;
+
+        margin-bottom: 50px;
+      }
+      .quote h2 {
+        text-align: right;
+        
+        font-weight: 500;
+        font-size: 22pt;
+        
+        margin-bottom: 15px;
+      }
+      .quote h3 {
+        text-align: right;
+        font-weight: 400;
+        font-size: 16pt;
+      }
+      #me {
+        color: #441935;
+        text-align: center;
+        opacity: .35;
+        
+        font-weight: 600;
+        font-size: 125pt;
+        line-height: 125pt;
+        
+        padding: 0;
+        margin: 30px 0 60px 0; 
+      }
+
+      /******************************************************************************************/
+
+      .landingPageMainContainer button {
+        background-color: rgba(62, 42, 85, .4);
+        
+        border: 1px solid white;
+        border-radius: 6px;
+        
+        color: white;
+
+        padding: 20px 27px;
+        font-size: 11pt;
+
+        font-weight: 300;
+        cursor: pointer;
+      }
+
+      .landingPageMainContainer button:focus { 
+        outline: 0;
+      }
+
+      .landingPageMainContainer button:hover {
+        background-color: rgba(56, 31, 87, .6);
+      }
+
+
+/******************************************************************************************/
+/* SERVICE PAGE */
+/******************************************************************************************/
+
+#ServicePage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/backgroundService.png");
+  background-repeat: repeat;
+}
+
+
+/******************************************************************************************/
+/* KNOWLEDGE PAGE */
+/******************************************************************************************/
+
+#KnowledgePage {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./images/backgroundKnowledge.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/******************************************************************************************/
+/* CONTACT PAGE */
+/******************************************************************************************/
+
+#ContactPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: red;
+}
