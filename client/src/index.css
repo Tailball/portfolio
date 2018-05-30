@@ -5,8 +5,11 @@
 body {
   margin: 0;
   padding: 0;
+  
   font-family: 'Quicksand', sans-serif; /*300-400-500-600*/
   font-size: 14pt;
+  line-height: 14pt;
+
   box-sizing: border-box;
 }
 
@@ -15,9 +18,48 @@ h1, h2, h3, h4 {
   padding: 0;
 }
 
+*:focus { outline: 0 };
+
 .mainContainer {
   width: 100vw;
 }
+
+.navigation {
+  position: fixed;
+  
+  width: 100vw;
+  height: 5%;
+
+  text-align: right;
+
+  transition: background-color .5s;
+}
+
+.navigation-inverse {
+  background-color: rgba(62, 42, 85, .85);
+}
+
+  .navigation a {
+    display: inline-block; /* because position fixed, we can't put margins on inline elements? */
+    color: white;
+    
+    font-size: 85%;
+    font-weight: 300;
+    text-decoration: none;
+    
+    padding-bottom: 5px;
+    margin-left: 25px;
+    padding-top: 15px;
+    
+    transition: color 0.2s, border 0.2s;
+  }
+    .navigation a:hover {
+      border-bottom: 2px solid #dfad00;
+      color: #dfad00;
+    }
+    .navigation a:last-child {
+      margin-right: 75px;
+    }
 
 
 /******************************************************************************************/
@@ -40,29 +82,6 @@ h1, h2, h3, h4 {
 
   /******************************************************************************************/
 
-  .navigation {
-    width: 100vw;
-    text-align: right;
-    
-    margin-top: 65px;
-    margin-right: 100px;
-  }
-
-    .navigation a {
-      color: white;
-      
-      font-size: 12pt;
-      font-weight: 300;
-      text-decoration: none;
-      
-      margin-left: 25px;
-    }
-      .navigation a:hover {
-        color: #dfad00;
-      }
-
-  /******************************************************************************************/
-
   .landingPageMainContainer {
     display: flex;
     align-items: center;
@@ -70,6 +89,8 @@ h1, h2, h3, h4 {
     flex-direction: column;
     
     width: 60vw;
+
+    margin-top: 125px;
   }
 
     .quote {
@@ -79,8 +100,8 @@ h1, h2, h3, h4 {
         text-align: center;
 
         font-weight: 300;
-        font-size: 38pt;
-        line-height: 45pt;
+        font-size: 280%;
+        line-height: 135%;
 
         margin-bottom: 50px;
       }
@@ -88,14 +109,14 @@ h1, h2, h3, h4 {
         text-align: right;
         
         font-weight: 500;
-        font-size: 22pt;
+        font-size: 130%;
         
         margin-bottom: 15px;
       }
       .quote h3 {
         text-align: right;
         font-weight: 400;
-        font-size: 16pt;
+        font-size: 110%;
       }
       #me {
         color: #441935;
@@ -103,8 +124,7 @@ h1, h2, h3, h4 {
         opacity: .35;
         
         font-weight: 600;
-        font-size: 125pt;
-        line-height: 125pt;
+        font-size: 900%;
         
         padding: 0;
         margin: 30px 0 60px 0; 
@@ -121,14 +141,12 @@ h1, h2, h3, h4 {
         color: white;
 
         padding: 20px 27px;
-        font-size: 11pt;
+        font-size: 75%;
 
         font-weight: 300;
         cursor: pointer;
-      }
 
-      .landingPageMainContainer button:focus { 
-        outline: 0;
+        transition: background-color 0.3s;
       }
 
       .landingPageMainContainer button:hover {
@@ -158,6 +176,16 @@ h1, h2, h3, h4 {
   background-image: url('./images/backgroundKnowledge.png');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/******************************************************************************************/
+/* PORTFOLIO PAGE */
+/******************************************************************************************/
+
+#PortfolioPage {
+  width: 100vw;
+  height: 100vh;
+  background-color: green;
 }
 
 

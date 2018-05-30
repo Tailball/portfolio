@@ -22,23 +22,38 @@ class Navigation extends React.Component {
   render() {
     return (
       <div className="navigation">
-        <a onClick={this.onNavClick} href="#" data-target="ServicePage">
+        <a
+          onClick={this.onNavClick}
+          href="#ServicePage"
+          data-target="ServicePage"
+        >
           SERVICES
-          </a>
+        </a>
 
-        <a onClick={this.onNavClick} href="#" data-target="KnowledgePage">
+        <a
+          onClick={this.onNavClick}
+          href="#KnowledgePage"
+          data-target="KnowledgePage"
+        >
           KNOWLEDGE
-          </a>
+        </a>
 
-        <a href="https://www.facebook.com/pg/jnpfreelance/photos" target="_blank">
+        <a
+          onClick={this.onNavClick}
+          href="#PortfolioPage"
+          data-target="PortfolioPage"
+        >
           PORTFOLIO
-          </a>
+        </a>
 
-        <a onClick={this.onNavClick} href="#" data-target="ContactPage">
+        <a
+          onClick={this.onNavClick}
+          href="#ContactPage"
+          data-target="ContactPage"
+        >
           CONTACT
-          </a>
+        </a>
       </div>
-
     );
   }
 }
