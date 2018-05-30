@@ -21,7 +21,7 @@ class LandingPage extends React.Component {
         <div className="landingPageMainContainer">
           <div className="quote">
             <h1 id="me">JP.</h1>
-            <h1>
+            <h1 id="topquote">
               I don't try to be better than everybody else<br />
               I just want to be better than myself
         </h1>

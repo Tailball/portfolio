@@ -1,174 +1,289 @@
 /******************************************************************************************/
 /* VARIABLES */
 /******************************************************************************************/
+$font-thin: 300;
+$font-regular: 400;
+$font-bold: 500;
+$font-heavy: 600;
+
+$transition-fast: .2s;
+$transition-medium: .5s;
+$transition-slow: .8s;
+
+$color-purewhite: rgba(255, 255, 255, 1);
+$color-logo: #441935;
+$color-button: rgba(62, 42, 85, .4);
+$color-button-hover: rgba(56, 31, 87, .6);
+$color-navbar-inverse: rgba(62, 42, 85, .85); 
+$color-divider: rgb(58, 58, 58);
+$color-link: #dfad00;
+
+$font-size-xl: 5rem;
+$font-size-l: 2.5rem;
+$font-size-regular: 1.8rem;
+$font-size-small: 1.6rem;
+$font-size-button: 1.4rem;
+
+
 /******************************************************************************************/
 /* MAIN ATTRIBUTES */
 /******************************************************************************************/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
-  *:focus {
-    outline: 0; }
+
+  box-sizing: border-box;
+
+  &:focus { outline: 0 };
+}
 
 html {
   font-size: 62.5%;
-  font-family: 'Quicksand', sans-serif;
-  /*300-400-500-600*/ }
+  font-family: 'Quicksand', sans-serif; /*300-400-500-600*/  
+}
 
 .mainContainer {
   width: 100vw;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .navigation {
   position: fixed;
   z-index: 9999;
+  
   width: 100vw;
   height: 5rem;
+
   text-align: right;
-  transition: background-color 0.5s; }
-  .navigation a {
-    display: inline-block;
-    color: white;
-    font-size: 1.6rem;
-    font-weight: 300;
+
+  transition: background-color $transition-medium;
+
+
+  a {
+    display: inline-block; //because position fixed, we can't put margins on inline elements?
+    color: $color-purewhite;
+    
+    font-size: $font-size-small;
+    font-weight: $font-thin;
     text-decoration: none;
+    
     padding-bottom: .5rem;
     margin-left: 2.5rem;
     padding-top: 1.5rem;
-    transition: all 0.2s; }
-    .navigation a:hover {
-      border-bottom: 0.2rem solid #dfad00;
-      color: #dfad00; }
-    .navigation a:last-child {
-      margin-right: 7.5rem; }
+    
+    transition: all $transition-fast;
+
+
+    &:hover {
+      border-bottom: .2rem solid $color-link;
+      color: $color-link;
+    }
+
+
+    &:last-child {
+      margin-right: 7.5rem;
+    }
+  }
+}
 
 .navigation-inverse {
-  background-color: rgba(62, 42, 85, 0.85);
-  box-shadow: 0 0.1rem 0.1rem #3a3a3a; }
+  background-color: $color-navbar-inverse;
+  box-shadow: 0 .1rem .1rem $color-divider;
+}
+
 
 /******************************************************************************************/
 /* LANDING PAGE */
 /******************************************************************************************/
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-25rem); }
+    transform: translateX(-25rem);
+  }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(25rem); }
+    transform: translateX(25rem);
+  }
   100% {
     opacity: 1;
-    transform: translateX(0); } }
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(15rem); }
+    transform: translateY(15rem);
+  }
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    transform: translateY(0);
+  }
+}
 
 /******************************************************************************************/
+
 #LandingPage {
   height: 100vh;
   background-image: url("./images/backgroundLanding.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+
   display: flex;
+  
   align-items: center;
   flex-direction: column;
-  color: white; }
+  
+  color: $color-purewhite;
+}
 
 .landingPageMainContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
   width: 60vw;
-  margin-top: 12.5rem; }
-  .landingPageMainContainer .quote {
-    margin-bottom: 9rem; }
-    .landingPageMainContainer .quote #topquote {
+
+  margin-top: 12.5rem;
+
+
+  .quote {
+    margin-bottom: 9rem;
+  
+
+    #topquote {
       text-align: center;
-      font-weight: 300;
-      font-size: 5rem;
-      line-height: 1.35;
+
+      font-weight: $font-thin;
+      font-size: $font-size-xl;
+      line-height: 1.35;  
+
       margin-bottom: 5rem;
-      animation: moveInLeft 0.8s; }
-    .landingPageMainContainer .quote h2 {
+
+      animation: moveInLeft $transition-slow;
+    }
+
+
+    h2 {
       text-align: right;
-      font-weight: 500;
-      font-size: 2.5rem;
+      
+      font-weight: $font-bold;
+      font-size: $font-size-l;
+      
       margin-bottom: 1.5rem;
-      animation: moveInRight 0.8s; }
-    .landingPageMainContainer .quote h3 {
+
+      animation: moveInRight $transition-slow;
+    }
+
+
+    h3 {
       text-align: right;
-      font-weight: 300;
-      font-size: 1.8rem;
-      animation: moveInRight 0.8s; }
-    .landingPageMainContainer .quote #me {
-      color: #441935;
+      font-weight: $font-thin;
+      font-size: $font-size-regular;
+
+      animation: moveInRight $transition-slow;
+    }
+
+
+    #me {
+      color: $color-logo;
       text-align: center;
       opacity: .35;
-      font-weight: 600;
+      
+      font-weight: $font-heavy;
       font-size: 16rem;
+      
       padding: 0;
-      margin: 3rem 0 6rem 0; }
-  .landingPageMainContainer button {
-    background-color: rgba(62, 42, 85, 0.4);
-    border: 0.1rem solid white;
+      margin: 3rem 0 6rem 0; 
+    }
+  }
+
+
+  button {
+    background-color: $color-button;
+    
+    border: 0.1rem solid $color-purewhite;
     border-radius: .6rem;
-    color: white;
+    
+    color: $color-purewhite;
+
     padding: 2rem 2.7rem;
-    font-size: 1.4rem;
-    font-weight: 300;
+    font-size: $font-size-button;
+
+    font-weight: $font-thin;
     cursor: pointer;
-    transition: background-color 0.2s;
-    animation: moveInBottom 0.8s; }
-    .landingPageMainContainer button:hover {
-      background-color: rgba(56, 31, 87, 0.6); }
+
+    transition: background-color $transition-fast;
+
+    animation: moveInBottom $transition-slow;
+
+
+    &:hover {
+      background-color: $color-button-hover;
+    }
+  }
+}   
+
 
 /******************************************************************************************/
 /* SERVICE PAGE */
 /******************************************************************************************/
+
 #ServicePage {
   width: 100vw;
   height: 100vh;
   background-image: url("./images/backgroundService.png");
-  background-repeat: repeat; }
+  background-repeat: repeat;
+}
+
 
 /******************************************************************************************/
 /* KNOWLEDGE PAGE */
 /******************************************************************************************/
+
 #KnowledgePage {
   width: 100vw;
   height: 100vh;
-  background-image: url("./images/backgroundKnowledge.png");
+
+  background-image: url('./images/backgroundKnowledge.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100vw 0, 100vw 80vh, 0 100vh); }
+
+  clip-path: polygon(0 0, 100vw 0, 100vw 80vh, 0 100vh);
+}
+
 
 /******************************************************************************************/
 /* PORTFOLIO PAGE */
 /******************************************************************************************/
+
 #PortfolioPage {
   width: 100vw;
   height: 100vh;
-  background-color: white; }
+  background-color: $color-purewhite;
+}
+
 
 /******************************************************************************************/
 /* CONTACT PAGE */
 /******************************************************************************************/
+
 #ContactPage {
   width: 100vw;
   height: 100vh;
+
   background-color: red;
-  clip-path: polygon(0 20vh, 100vw 0, 100vw 100vh, 0 100vh); }
+
+  clip-path: polygon(0 20vh, 100vw 0, 100vw 100vh, 0 100vh);
+}
