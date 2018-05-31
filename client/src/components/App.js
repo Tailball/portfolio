@@ -5,6 +5,7 @@ import LandingPage from './LandingPage';
 import ServicePage from './ServicePage';
 import KnowledgePage from './KnowledgePage';
 import PortfolioPage from './PortfolioPage';
+import ContactPage from './ContactPage';
 
 class App extends React.Component {
   render() {
@@ -20,7 +21,7 @@ class App extends React.Component {
 
         <PortfolioPage />
 
-        <section id="ContactPage" />
+        <ContactPage />
       </div>
     );
   }

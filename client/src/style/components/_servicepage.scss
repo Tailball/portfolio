@@ -1,0 +1,43 @@
+#ServicePage {
+  background-image: url("../images/backgroundService.png");
+  background-repeat: repeat;
+
+  color: $color-main;
+
+  .serviceContainer {
+    display: flex;
+    align-content: stretch;
+    flex-direction: row;
+
+    width: 80vw;
+    margin: 0 auto;
+
+    .serviceContainer__service {
+      width: 100%;
+
+      &:first-child {
+        margin-right: 7.5rem;
+      }
+
+      h2 {
+        font-size: $font-size-regular;
+        font-weight: $font-bold;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        font-size: $font-size-small;
+        font-weight: $font-regular;
+        line-height: 1.7;
+      
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+
+        span {
+          font-weight: $font-bold;
+        }
+      }
+    }
+  }
+}

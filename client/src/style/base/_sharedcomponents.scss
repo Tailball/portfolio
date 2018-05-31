@@ -1,0 +1,33 @@
+h1.textTitle {
+  text-align: center;
+  font-size: $font-size-large;
+  font-weight: $font-regular;
+  letter-spacing: .3rem;
+  
+  padding-top: 8rem;
+  margin-bottom: 7.5rem;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 4%;
+    background-color: $color-main;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
+
+a.textLink {
+  font-size: $font-size-xsmall;
+  font-weight: $font-fat;
+  color: $color-main;
+  text-decoration: none;
+  transition: all $transition-fast;
+
+  &:hover {
+    color: $color-link;
+    border-bottom: .2rem solid $color-link;
+    padding-bottom: .2rem;
+  }
+}

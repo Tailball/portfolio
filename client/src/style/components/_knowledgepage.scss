@@ -1,0 +1,9 @@
+#KnowledgePage {
+
+  background-image: url('../images/backgroundKnowledge.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  clip-path: polygon(0 0, 100vw 0, 100vw 80vh, 0 100vh);
+}

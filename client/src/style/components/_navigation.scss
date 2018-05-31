@@ -1,0 +1,40 @@
+.navigation {
+  position: fixed;
+  z-index: 9999;
+  
+  width: 100vw;
+  height: 5rem;
+
+  text-align: right;
+
+  transition: background-color $transition-medium;
+
+  a {
+    display: inline-block; //because position fixed, we can't put margins on inline elements
+    color: $color-purewhite;
+    
+    font-size: $font-size-tiny;
+    font-weight: $font-regular;
+    text-decoration: none;
+    
+    padding-bottom: .5rem;
+    margin-left: 2.5rem;
+    padding-top: 1.5rem;
+    
+    transition: all $transition-fast;
+
+    &:hover {
+      border-bottom: .2rem solid $color-link;
+      color: $color-link;
+    }
+
+    &:last-child {
+      margin-right: 7.5rem;
+    }
+  }
+}
+
+.navigation-inverse {
+  background-color: $color-main; // $color-navbar-inverse;
+  box-shadow: 0 .1rem .1rem $color-divider;
+}

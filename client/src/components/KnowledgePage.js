@@ -10,11 +10,11 @@ class KnowledgePage extends React.Component {
   }
 
   render() {
-    return (
-      <section id="KnowledgePage">
+    return <section id="KnowledgePage">
         <Waypoint onEnter={this.handleOnEnter} />
-      </section>
-    );
+
+        <h1 className="textTitle">my skillset</h1>
+      </section>;
   }
 }
 

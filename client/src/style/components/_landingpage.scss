@@ -1,0 +1,125 @@
+// ANIMATIONS
+/******************************************************************************************/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(25rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/******************************************************************************************/
+
+#LandingPage {
+  display: flex;
+  justify-content: center;
+
+  background-image: url("../images/backgroundLanding.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  
+  color: $color-purewhite;
+
+  .landingPageMainContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 67vw;
+
+    .quote {
+      margin-bottom: 10rem;
+
+      #me {
+        color: $color-logo;
+        text-align: center;
+        opacity: .35;
+        
+        font-weight: $font-fat;
+        font-size: 15rem;
+
+        margin-bottom: 3rem;
+      }
+    
+      #topquote {
+        text-align: center;
+
+        font-weight: $font-thin;
+        font-size: $font-lp-size-xxlarge;
+        line-height: 1.35; 
+        letter-spacing: .3rem; 
+
+        margin-bottom: 5rem;
+
+        animation: moveInLeft $transition-slow ease-out;
+      }
+
+      h2 {
+        text-align: right;
+        
+        font-weight: $font-heavy;
+        font-size: $font-lp-size-large;
+        
+        margin-bottom: 1.5rem;
+
+        animation: moveInRight $transition-slow ease-out;
+      }
+
+      h3 {
+        text-align: right;
+        font-weight: $font-regular;
+        font-size: $font-lp-size-small;
+
+        animation: moveInRight $transition-slow ease-out;
+      }
+    }
+
+    button {
+      background-color: $color-button;
+      color: $color-purewhite;
+      
+      border: 0.1rem solid $color-purewhite;
+      border-radius: .6rem;
+      
+      padding: 2rem 2.7rem;
+
+      font-size: $font-lp-size-tiny;
+      font-weight: $font-regular;
+
+      cursor: pointer;
+
+      transition: background-color $transition-fast;
+      animation: moveInBottom $transition-slow;
+
+      &:hover {
+        background-color: $color-button-hover;
+      }
+    }
+  }   
+}
