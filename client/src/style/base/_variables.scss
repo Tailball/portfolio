@@ -10,13 +10,14 @@ $font-lp-size-tiny: 1.4rem;
 $font-lp-size-small: 1.8rem;
 $font-lp-size-regular: 2rem;
 $font-lp-size-large: 2.4rem;
-$font-lp-size-xxlarge: 6.5rem;
+$font-lp-size-xxlarge: 5rem;
 
 //Text size
 $font-size-tiny: 1.4rem;
 $font-size-xsmall: 1.75rem;
 $font-size-small: 2rem;
 $font-size-regular: 2.4rem;
+$font-size-medium: 2.8rem;
 $font-size-large: 4.5rem;
 
 //$font-size-xlarge: 3.5rem;
@@ -43,5 +44,10 @@ $color-link: #dfad00;
 $color-button: rgba($color-main, .4);
 $color-button-hover: rgba($color-main-accent, .6);
 
+
+//MEDIA QUERY SIZING 
+$size-width-tablet: 85vw;
+$size-width-tabletportrait: 95vw;
+$size-width-phone: 70vw;
 
 

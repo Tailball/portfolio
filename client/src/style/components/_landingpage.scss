@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 67vw;
+    width: 75vw;
 
     .quote {
       margin-bottom: 10rem;
@@ -108,6 +108,7 @@
       border-radius: .6rem;
       
       padding: 2rem 2.7rem;
+      margin-bottom: 6rem;
 
       font-size: $font-lp-size-tiny;
       font-weight: $font-regular;
@@ -122,4 +123,32 @@
       }
     }
   }   
+}
+
+@media screen and (max-width: 1350px) {
+  #LandingPage {
+    .landingPageMainContainer {
+      width: $size-width-tablet;
+    }
+  }
+}
+
+//break already defined in 1350
+
+@media screen and (max-width: 1045px) { //CUSTOM
+  #LandingPage {
+    .landingPageMainContainer {
+      width: $size-width-tabletportrait;
+    }
+  }  
+}
+
+//break already defined in 1045
+
+@media screen and (max-width: 715px) {
+  #LandingPage {
+    .landingPageMainContainer {
+      width: $size-width-phone;
+    }
+  }  
 }

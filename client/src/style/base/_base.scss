@@ -13,7 +13,8 @@ html {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
 }
 
 #reactContainer {
@@ -22,4 +23,16 @@ section {
 
 .mainContainer {
   width: 100vw;
+}
+
+@media screen and (max-width: 1200px) {
+  html {font-size: 55%;}  
+}
+
+@media screen and (max-width: 900px) {
+  html {font-size: 51%;}
+}
+
+@media screen and (max-width: 900px) {
+  html {font-size: 45%;}
 }
