@@ -10,27 +10,19 @@ html {
   font-family: 'Lato', sans-serif;
   /*100,300,400,700,900*/ }
 
-section {
-  min-height: 100vh;
-  height: fit-content; }
-
 #reactContainer {
   overflow: hidden; }
 
-.mainContainer {
+.container {
   width: 100vw; }
 
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 55%; } }
+.mainContent {
+  display: flex;
+  flex-direction: column; }
 
-@media screen and (max-width: 900px) {
-  html {
-    font-size: 51%; } }
-
-@media screen and (max-width: 900px) {
-  html {
-    font-size: 45%; } }
+section {
+  min-height: 100vh;
+  height: fit-content; }
 
 h1.textTitle {
   text-align: center;
@@ -59,32 +51,36 @@ a.textLink {
     border-bottom: 0.2rem solid #dfad00;
     padding-bottom: .2rem; }
 
-.navigation {
+.navBar {
   position: fixed;
-  z-index: 9999;
+  z-index: 20;
   width: 100vw;
-  height: 5rem;
-  text-align: right;
-  transition: background-color 0.5s; }
-  .navigation a {
-    display: inline-block;
+  background-color: #482258;
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 5rem;
+  justify-content: space-between;
+  align-items: center; }
+  .navBar .navLogo {
+    grid-column: 1 / 2;
+    margin-left: 1.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff; }
+  .navBar .navItems {
+    grid-column: 2 / 3;
+    margin-right: 6rem; }
+  .navBar a {
     color: #fff;
     font-size: 1.4rem;
     font-weight: 300;
     text-decoration: none;
-    padding-bottom: .5rem;
-    margin-left: 2.5rem;
-    padding-top: 1.5rem;
     transition: all 0.2s; }
-    .navigation a:hover {
+    .navBar a:not(:last-child) {
+      margin-right: 2rem; }
+    .navBar a:hover {
       border-bottom: 0.2rem solid #dfad00;
       color: #dfad00; }
-    .navigation a:last-child {
-      margin-right: 7.5rem; }
-
-.navigation-inverse {
-  background-color: #482258;
-  box-shadow: 0 0.1rem 0.1rem #3a3a3a; }
 
 /******************************************************************************************/
 @keyframes moveInLeft {

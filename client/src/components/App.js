@@ -10,19 +10,17 @@ import ContactPage from './ContactPage';
 class App extends React.Component {
   render() {
     return (
-      <div className="mainContainer">
+      <div className="container">
         <Navigation />
-
-        <LandingPage />
-
-        <ServicePage />
-
-        <KnowledgePage />
-
-        <PortfolioPage />
-
-        <ContactPage />
-      </div>
+        
+        <div className="mainContent">
+          <LandingPage />
+          <ServicePage />
+          <KnowledgePage />
+          <PortfolioPage />
+          <ContactPage />
+        </div>
+      </div >
     );
   }
 }

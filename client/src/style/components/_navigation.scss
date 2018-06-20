@@ -1,40 +1,47 @@
-.navigation {
+.navBar {
   position: fixed;
-  z-index: 9999;
+  z-index: 20;
   
   width: 100vw;
-  height: 5rem;
 
-  text-align: right;
+  background-color: $color-main;
+  
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 5rem;
+  justify-content: space-between;
+  align-items: center;
 
-  transition: background-color $transition-medium;
+  .navLogo {
+    grid-column: 1 / 2;
+    margin-left: 1.5rem;
+
+    font-size: $font-lp-size-large;
+    font-weight: $font-heavy;
+    color: $color-purewhite;
+  }
+
+  .navItems {
+    grid-column: 2 / 3;
+    margin-right: 6rem;
+  }
 
   a {
-    display: inline-block; //because position fixed, we can't put margins on inline elements
-    color: $color-purewhite;
+     color: $color-purewhite;
     
-    font-size: $font-size-tiny;
-    font-weight: $font-regular;
-    text-decoration: none;
+     font-size: $font-size-tiny;
+     font-weight: $font-regular;
+     text-decoration: none;
     
-    padding-bottom: .5rem;
-    margin-left: 2.5rem;
-    padding-top: 1.5rem;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
     
-    transition: all $transition-fast;
+     transition: all $transition-fast;
 
     &:hover {
-      border-bottom: .2rem solid $color-link;
-      color: $color-link;
-    }
-
-    &:last-child {
-      margin-right: 7.5rem;
+       border-bottom: .2rem solid $color-link;
+       color: $color-link;
     }
   }
-}
-
-.navigation-inverse {
-  background-color: $color-main; // $color-navbar-inverse;
-  box-shadow: 0 .1rem .1rem $color-divider;
 }

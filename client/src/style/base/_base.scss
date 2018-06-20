@@ -12,27 +12,32 @@ html {
   font-family: 'Lato', sans-serif; /*100,300,400,700,900*/  
 }
 
+#reactContainer {
+  overflow: hidden;
+}
+
+.container {
+  width: 100vw;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
 section {
   min-height: 100vh;
   height: fit-content;
 }
 
-#reactContainer {
-  overflow: hidden;
-}
+// @media screen and (max-width: 1200px) {
+//   html {font-size: 55%;}  
+// }
 
-.mainContainer {
-  width: 100vw;
-}
+// @media screen and (max-width: 900px) {
+//   html {font-size: 51%;}
+// }
 
-@media screen and (max-width: 1200px) {
-  html {font-size: 55%;}  
-}
-
-@media screen and (max-width: 900px) {
-  html {font-size: 51%;}
-}
-
-@media screen and (max-width: 900px) {
-  html {font-size: 45%;}
-}
+// @media screen and (max-width: 900px) {
+//   html {font-size: 45%;}
+// }
