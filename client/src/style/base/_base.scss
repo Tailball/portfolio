@@ -30,14 +30,10 @@ section {
   height: fit-content;
 }
 
-// @media screen and (max-width: 1200px) {
-//   html {font-size: 55%;}  
-// }
+@media screen and (max-width: 1200px) {
+  html {font-size: 55%;}  
+}
 
-// @media screen and (max-width: 900px) {
-//   html {font-size: 51%;}
-// }
-
-// @media screen and (max-width: 900px) {
-//   html {font-size: 45%;}
-// }
+@media screen and (max-width: 945px) {
+   html {font-size: 45%;}
+}

@@ -1,65 +1,70 @@
 #ServicePage {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: repeat(auto-fill, minmax(65rem, 80rem));
+  justify-content: center;
+  align-items: start;
+
   background-image: url("../images/backgroundService.png");
   background-repeat: repeat;
   padding-bottom: 10%;
 
   color: $color-main;
 
-  .serviceContainer {
-    display: flex;
-    align-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+  h1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
 
-    width: 85vw;
-    margin: 0 auto;
+.serviceContainer {
+  margin-bottom: 4.5rem;
 
-    .serviceContainer__service {
-      width: 46%;
+    h2 {
+      font-size: $font-size-regular;
+      font-weight: $font-bold;
+      margin-bottom: 2rem;
+    }
 
-      &:first-child {
-        margin-right: 4%;
+    p {
+      font-size: $font-size-small;
+      font-weight: $font-regular;
+      line-height: 1.7;
+    
+      &:not(:last-child) {
+        margin-bottom: 1.65rem;
       }
 
-      h2 {
-        font-size: $font-size-regular;
+      span {
         font-weight: $font-bold;
-        margin-bottom: 2rem;
-      }
-
-      p {
-        font-size: $font-size-small;
-        font-weight: $font-regular;
-        line-height: 1.7;
-      
-        &:not(:last-child) {
-          margin-bottom: 1.65rem;
-        }
-
-        span {
-          font-weight: $font-bold;
-        }
       }
     }
+  }
+}
+
+@media screen and (max-width: 625px) {
+  #ServicePage {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceContainer {
+    margin: 0 3rem 3rem 3rem;
   }
 }
 
 //media 1200 - 900 ok!
+// @media screen and (max-width: 785px) {
+//   #ServicePage {
+//     .serviceContainer {
+//       width: $size-width-phone;
 
+//       .serviceContainer__service {
+//         width: 100%;
+//         margin-bottom: 6rem;
 
-@media screen and (max-width: 785px) {
-  #ServicePage {
-    .serviceContainer {
-      width: $size-width-phone;
-
-      .serviceContainer__service {
-        width: 100%;
-        margin-bottom: 6rem;
-
-        &:first-child {
-          margin-right: 0;
-        }
-      }
-    }
-  }
-}
+//         &:first-child {
+//           margin-right: 0;
+//         }
+//       }
+//     }
+//   }
+// }

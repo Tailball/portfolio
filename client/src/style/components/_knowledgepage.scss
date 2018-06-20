@@ -1,113 +1,134 @@
 #KnowledgePage {
-  padding-bottom: 10%;
-
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 35rem));
+  justify-content: center;
+  align-items: start;
+  grid-column-gap: 2.5rem;
+  
   background-image: url('../images/backgroundKnowledge.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
 
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-
   color: $color-purewhite;
 
-  h1 {
+  .textTitle {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+
     &::after {
       background-color: $color-purewhite;
     }
   }
 
-  h2 {
-    width: 75vw;
-    margin: 0 auto;
+  .subTitle {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+
+    margin-bottom: 7rem;
+
     font-size: $font-size-medium;
     font-weight: $font-bold;
-    margin-bottom: 5rem;
   }
 
-  .knowledgecontainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    width: 75vw;
-    margin: 0 auto;
+  .knowledgecontainer__branch {
+    margin-bottom: 4.5rem;
     
-    .knowledgecontainer__branch {
-      width: 33%;
-      margin-bottom: 3.5rem;
+    h3 {
+      font-size: $font-size-regular;
+      font-weight: $font-regular;
+      margin-bottom: 3rem;
+    }
 
-      h3 {
-        font-size: $font-size-regular;
-        font-weight: $font-regular;
-        margin-bottom: 3rem;
-      }
+    ul {
+      list-style: none;
 
-      ul {
-        list-style: none;
-
-        li {
-          font-weight: $font-thin;
-          font-size: $font-size-small;
-          margin-bottom: 1.5rem;
-        }
+      li {
+        font-weight: $font-thin;
+        font-size: $font-size-small;
+        margin-bottom: 1.5rem;
       }
     }
   }
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 735px) {
   #KnowledgePage {
-    h2 { 
-      width: $size-width-tablet;
-    }
-    .knowledgecontainer {
-      width: $size-width-tablet;
-    }
+    grid-template-columns: 1fr;
+  }
+
+  .subTitle {
+    justify-self: center;
+  }
+
+  .knowledgecontainer__branch {
+    margin: 0 3rem 3rem 3rem;
   }
 }
+
+@media screen and (max-width: 440px) { 
+  .subTitle {
+    display: none;
+  }
+
+  .knowledgecontainer__branch {
+    text-align: center;
+  }
+}
+
+// @media screen and (max-width: 1350px) {
+//   #KnowledgePage {
+//     h2 { 
+//       width: $size-width-tablet;
+//     }
+//     .knowledgecontainer {
+//       width: $size-width-tablet;
+//     }
+//   }
+// }
 
 //media 1200 ok!
 
-@media screen and (max-width: 1080px) {
-  #KnowledgePage {
-    h2 {
-      width: $size-width-tabletportrait;
-    }
-    .knowledgecontainer {
-      width: $size-width-tabletportrait;
-    }    
-  }
-}
+// @media screen and (max-width: 1080px) {
+//   #KnowledgePage {
+//     h2 {
+//       width: $size-width-tabletportrait;
+//     }
+//     .knowledgecontainer {
+//       width: $size-width-tabletportrait;
+//     }    
+//   }
+// }
 
-@media screen and (max-width: 985px){
-  #KnowledgePage {
-    h2 {
-      width: $size-width-tablet;
-    }
-    .knowledgecontainer {
-      width: $size-width-tablet;
+// @media screen and (max-width: 985px){
+//   #KnowledgePage {
+//     h2 {
+//       width: $size-width-tablet;
+//     }
+//     .knowledgecontainer {
+//       width: $size-width-tablet;
 
-      .knowledgecontainer__branch {
-        width: 50%;
-      }
-    }
-  }
-}
+//       .knowledgecontainer__branch {
+//         width: 50%;
+//       }
+//     }
+//   }
+// }
 
-//media 900 ok!
+// //media 900 ok!
 
-@media screen and (max-width: 715px){
-  #KnowledgePage {
-    h2{
-      width: $size-width-phone;
-    }
-    .knowledgecontainer {
-      width: $size-width-phone;
+// @media screen and (max-width: 715px){
+//   #KnowledgePage {
+//     h2{
+//       width: $size-width-phone;
+//     }
+//     .knowledgecontainer {
+//       width: $size-width-phone;
 
-      .knowledgecontainer__branch {
-        width: 100%;
-      }
-    }
-  }
-}
+//       .knowledgecontainer__branch {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }

@@ -24,6 +24,14 @@ section {
   min-height: 100vh;
   height: fit-content; }
 
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 55%; } }
+
+@media screen and (max-width: 945px) {
+  html {
+    font-size: 45%; } }
+
 h1.textTitle {
   text-align: center;
   font-size: 4.5rem;
@@ -178,107 +186,88 @@ a.textLink {
     width: 70vw; } }
 
 #ServicePage {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: repeat(auto-fill, minmax(65rem, 80rem));
+  justify-content: center;
+  align-items: start;
   background-image: url("../images/backgroundService.png");
   background-repeat: repeat;
   padding-bottom: 10%;
   color: #482258; }
+  #ServicePage h1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2; }
   #ServicePage .serviceContainer {
-    display: flex;
-    align-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 85vw;
-    margin: 0 auto; }
-    #ServicePage .serviceContainer .serviceContainer__service {
-      width: 46%; }
-      #ServicePage .serviceContainer .serviceContainer__service:first-child {
-        margin-right: 4%; }
-      #ServicePage .serviceContainer .serviceContainer__service h2 {
-        font-size: 2.4rem;
-        font-weight: 400;
-        margin-bottom: 2rem; }
-      #ServicePage .serviceContainer .serviceContainer__service p {
-        font-size: 2rem;
-        font-weight: 300;
-        line-height: 1.7; }
-        #ServicePage .serviceContainer .serviceContainer__service p:not(:last-child) {
-          margin-bottom: 1.65rem; }
-        #ServicePage .serviceContainer .serviceContainer__service p span {
-          font-weight: 400; }
+    margin-bottom: 4.5rem; }
+    #ServicePage .serviceContainer h2 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      margin-bottom: 2rem; }
+    #ServicePage .serviceContainer p {
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.7; }
+      #ServicePage .serviceContainer p:not(:last-child) {
+        margin-bottom: 1.65rem; }
+      #ServicePage .serviceContainer p span {
+        font-weight: 400; }
 
-@media screen and (max-width: 785px) {
-  #ServicePage .serviceContainer {
-    width: 70vw; }
-    #ServicePage .serviceContainer .serviceContainer__service {
-      width: 100%;
-      margin-bottom: 6rem; }
-      #ServicePage .serviceContainer .serviceContainer__service:first-child {
-        margin-right: 0; } }
+@media screen and (max-width: 625px) {
+  #ServicePage {
+    grid-template-columns: 1fr; }
+  .serviceContainer {
+    margin: 0 3rem 3rem 3rem; } }
 
 #KnowledgePage {
-  padding-bottom: 10%;
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 35rem));
+  justify-content: center;
+  align-items: start;
+  grid-column-gap: 2.5rem;
   background-image: url("../images/backgroundKnowledge.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   color: #fff; }
-  #KnowledgePage h1::after {
-    background-color: #fff; }
-  #KnowledgePage h2 {
-    width: 75vw;
-    margin: 0 auto;
+  #KnowledgePage .textTitle {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1; }
+    #KnowledgePage .textTitle::after {
+      background-color: #fff; }
+  #KnowledgePage .subTitle {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    margin-bottom: 7rem;
     font-size: 2.8rem;
-    font-weight: 400;
-    margin-bottom: 5rem; }
-  #KnowledgePage .knowledgecontainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 75vw;
-    margin: 0 auto; }
-    #KnowledgePage .knowledgecontainer .knowledgecontainer__branch {
-      width: 33%;
-      margin-bottom: 3.5rem; }
-      #KnowledgePage .knowledgecontainer .knowledgecontainer__branch h3 {
-        font-size: 2.4rem;
-        font-weight: 300;
-        margin-bottom: 3rem; }
-      #KnowledgePage .knowledgecontainer .knowledgecontainer__branch ul {
-        list-style: none; }
-        #KnowledgePage .knowledgecontainer .knowledgecontainer__branch ul li {
-          font-weight: 100;
-          font-size: 2rem;
-          margin-bottom: 1.5rem; }
+    font-weight: 400; }
+  #KnowledgePage .knowledgecontainer__branch {
+    margin-bottom: 4.5rem; }
+    #KnowledgePage .knowledgecontainer__branch h3 {
+      font-size: 2.4rem;
+      font-weight: 300;
+      margin-bottom: 3rem; }
+    #KnowledgePage .knowledgecontainer__branch ul {
+      list-style: none; }
+      #KnowledgePage .knowledgecontainer__branch ul li {
+        font-weight: 100;
+        font-size: 2rem;
+        margin-bottom: 1.5rem; }
 
-@media screen and (max-width: 1350px) {
-  #KnowledgePage h2 {
-    width: 85vw; }
-  #KnowledgePage .knowledgecontainer {
-    width: 85vw; } }
+@media screen and (max-width: 735px) {
+  #KnowledgePage {
+    grid-template-columns: 1fr; }
+  .subTitle {
+    justify-self: center; }
+  .knowledgecontainer__branch {
+    margin: 0 3rem 3rem 3rem; } }
 
-@media screen and (max-width: 1080px) {
-  #KnowledgePage h2 {
-    width: 95vw; }
-  #KnowledgePage .knowledgecontainer {
-    width: 95vw; } }
-
-@media screen and (max-width: 985px) {
-  #KnowledgePage h2 {
-    width: 85vw; }
-  #KnowledgePage .knowledgecontainer {
-    width: 85vw; }
-    #KnowledgePage .knowledgecontainer .knowledgecontainer__branch {
-      width: 50%; } }
-
-@media screen and (max-width: 715px) {
-  #KnowledgePage h2 {
-    width: 70vw; }
-  #KnowledgePage .knowledgecontainer {
-    width: 70vw; }
-    #KnowledgePage .knowledgecontainer .knowledgecontainer__branch {
-      width: 100%; } }
+@media screen and (max-width: 440px) {
+  .subTitle {
+    display: none; }
+  .knowledgecontainer__branch {
+    text-align: center; } }
 
 #PortfolioPage {
   background-color: red; }
